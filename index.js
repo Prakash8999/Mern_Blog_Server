@@ -1,5 +1,5 @@
 import express, { Router } from 'express'
-import corse from 'cors'
+import cors from 'cors'
 import { connectDb } from './db/database.js'
 import { User } from './model/userModel.js'
 import bcrypt from 'bcrypt'
@@ -20,7 +20,7 @@ config({
 
 // middlerwares
 app.use(express.json())
-app.use(corse({credentials:true,origin:'*'}))
+app.use(cors({credentials:true,origin:'*'}))
 app.use(bodyParser.json())
 app.use(cookieParser())
 app.use('/', userRouter)
