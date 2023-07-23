@@ -7,16 +7,10 @@ import bodyParser from 'body-parser'
 import  jwt  from 'jsonwebtoken'
 import cookieParser from 'cookie-parser'
 import userRouter from './routes/Route.js'
-import { config } from 'dotenv'
+import dotenv from 'dotenv'
 const app = express()
 
-
-
-
-config({
-
-	path:"./.env"
-})
+dotenv.config()
 
 // middlerwares
 app.use(express.json())
