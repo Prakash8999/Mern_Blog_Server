@@ -14,7 +14,7 @@ dotenv.config()
 
 // middlerwares
 app.use(express.json())
-app.use(cors({credentials:true,origin:['http://localhost:3000']}))
+app.use(cors({credentials:true,origin:['https://writevix.vercel.app']}))
 app.use(bodyParser.json())
 app.use(cookieParser())
 app.use('/', userRouter)
